@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link referrerpolicy="=stylesheet" href="style.css">
+    <script src="jello.js"></script>
+</head>
+<body>
+    <h2>Js Tutorial</h2>
+    <!--
+    <div id="chessboard"></div>
+        <ul>
+            <li id="first" >hi 1</li>
+            <li class="last" >hi 2</li>
+            <li id="last" >hi 3</li>
+            <li class="last" >hi 4</li>
+        </ul>
+
+    getElementByTagName
+    <h1> heading 1</h1>
+    <p>paragraph 1</p>
+    <div id="div1">
+        <h2>heading 2</h2>
+        <p> paragraph 2</p>
+        <h3>heading 3</h3>
+        <p> paragraph 3</p>
+    </div>
+    <div>
+        <h1> head 1</h1>
+        <p id="bio"></p>
+
+        <div id="div2">
+            <p class="chem">para1</p>
+            <h2 class="botny"> head 2</h2>
+            <p> para 2</p>
+            <h3>head 3</h3>
+            <p class="botny"> para 3</p>
+        </div>
+        <ul>
+            <li id="intro">list1</li>
+            <li>list 2</li>
+            <li>list 3</li>
+            <li>list 4</li>
+            <li>list 5</li>
+        </ul>
+
+        <ul id="mahabharat">
+            <li>list a</li>
+            <li>list b</li>
+            <li id="pandav">list c</li>
+            <li>list d</li>
+            <li>list e</li>
+        </ul>
+    </div>
+    <div id="hello">
+        <p> hello its a p tag</p>
+    </div>
+    <div id="am">
+        <p>this is Ram</p>
+    </div>
+    
+    <ul id="list">
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+        <li>list4</li>
+        <li>list5</li>
+    </ul>
+    <div id="school1">
+        <p> nice school</p>
+        <h1> nice building</h1>
+    </div>
+    <div id="school2">
+        <p> good school</p>
+        <h1> good building</h1>
+    </div>
+    <div id="school3">
+        <p>bad school</p>
+        <h1>bad building</h1>
+    </div>
+-->
+    <!--beforebegin-->
+    <div id="intro">
+         <!--afterbegin-->
+        <h1>it's a heading</h1>
+        <p> it's aparagraph</p>
+         <!-- beforeend-->
+    </div>
+     <!--afterend-->
+     <button id="btn">send</button>
+    <script>
+        /*
+        //get element by id
+        let el1 = document.getElementById("first");
+        el1.innerHTML="<p> hi its me ,shree</p>";
+
+        //getElementByClassName 
+        let el2= document.getElementsByClassName("last");
+        for(let i=0;i<el2.length;i++){
+            el2[i].innerHTML="which type of number";
+        }
+
+        //getElementByTagName
+        let div1=document.getElementById("div1");
+        let el3 =div1.getElementsByTagName("h3");
+
+        for(let j=0;j<el3.length;j++){
+            el3[j].innerHTML="tell me about your self";
+        }
+        
+        //querySelector
+        let ele=document.querySelector("p.chem");
+        ele.innerHTML="hi i am ram";
+        console.log(ele);
+
+        //querySelectorAll
+        let ele2=document.querySelectorAll("p.botny");
+        for(let i=0;i<ele2.length;i++){
+            ele2[i].innerHTML="i am Sita";
+            console.log(ele2);
+        }
+
+        //traversing ->from child to parentElement
+        let ele3=document.getElementById("intro");
+        let prt=ele3.parentElement;
+        prt.innerHTML='hello';
+        console.log(ele3);
+
+
+        //traversing ->from parent to child Element
+        let ele4=document.getElementById("mahabharat")
+        let node=ele4.firstElementChild;
+        console.log(node);
+        let lnode =ele4.lastElementChild;
+        console.log(lnode);
+        //let ele5=document.getElementById('pandav');
+        let pev=ele4.previousElementSibling;
+        console.log(pev);
+        //it will give tha output as hello- the another div 
+        let nxt=ele4.nextElementSibling;
+        console.log(nxt);
+        //it will give th script tag as next sibling of this
+
+        //fetch (innerHTML)
+        let elem=document.getElementById("hello");
+        let content=elem.innerHTML;
+        console.log(content);
+        //setting (innerHTML)
+        let elem2=document.getElementById("hello");
+        elem2.innerHTML="changed sucessfully";
+        console.log(elem2);
+
+        //create and append
+        let element=document.getElementById("am");
+        let h1=document.createElement('h1');
+        let text=document.createTextNode("this is a h1 tag");
+        h1.appendChild(text);
+        element.appendChild(text);
+        
+       let element=document.getElementById("am");
+       let h1=document.createElement('h1');
+       let text=document.createTextNode("this is a h1 tag")
+       h1.className="try cry";
+       h1.id="am2";
+       h1.appendChild(text);
+        element.appendChild(h1);
+
+        //using proprty to append child
+        h1.textContent="content added";
+        //append outside of div
+        document.body.appendChild(h1); 
+
+        //appending in a ul
+        let list1=document.getElementById("list");
+        let item=document.createElement("li");
+        item.textContent="new list 5";
+        list1.appendChild(item);
+      
+       let list2=document.getElementById("list");
+       let item=document.createElement('li');
+       item.textContent="this is new list";
+       let pos=list2.firstElementChild.nextElementSibling;
+       list2.insertBefore(item,pos);
+
+   
+        //inserting in body before any element
+        let parent=document.body;
+        let element=document.createElement('h2');
+        element.textContent="this is new";
+        let list=document.getElementById("list");
+        parent.insertBefore(element,list);
+      
+        --remove any child element
+       let list=document.getElementById('list');
+        let rem=list.lastElementChild;
+        list.removeChild(rem);
+
+        let remove=list.firstElementChild.nextElementSibling;
+        list.removeChild(remove);
+
+        let parent=document.body.removeChild(list );
+        
+        let list=document.getElementById('list');
+        
+        let cloneElm=list.cloneNode(true);
+        //console.log(cloneElm);
+        cloneElm.id="menu";
+        //console.log(cloneElm);
+        document.body.appendChild(cloneElm);
+
+        
+       //replace element
+       let list=document.getElementById("list");
+       let item=document.createElement("li");
+       item.textContent="not a list";
+       let replace=list.firstElementChild.nextElementSibling;
+       list.replaceChild(item,replace);
+        //replace in div
+       let parent=document.getElementById("school2");
+       let item2= document.createElement("h1");
+       item2.textContent="it as a model school";
+       let replace1= parent.firstElementChild.nextElementSibling;
+       parent.replaceChild(item2,replace1);
+       
+      //InsertAdjacentHTML
+      let element=document.getElementById("intro");
+      let html2="<h1> new H1 </h1>";
+      //element.insertAdjacentHTML('beforebegin',html2);
+      //element.insertAdjacentHTML('afterbegin',html2);
+      element.insertAdjacentHTML('beforeend',html2);
+      //element.insertAdjacentHTML('afterend',html2);
+    
+
+        //change attribute
+        let btn=document.getElementById("btn");
+        btn.setAttribute("name",'form1');
+         let val=btn.getAttribute("name");
+         console.log(val);
+
+         */
+        let btn=document.getElementById("btn");
+        btn.style.cssText="background-color:red;color:white;";
+    </script>
+</body>
+
+</html>
